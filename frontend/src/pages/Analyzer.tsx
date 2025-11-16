@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import {
   Activity,
   Zap,
@@ -262,10 +262,12 @@ const Analyzer: React.FC = () => {
 
           {/* Title and Icon - Centered */}
           <div className="flex flex-col items-center gap-1 flex-1 justify-center">
+            <Link to="/">
             <VideoLogo size="md" />
             <h1 className="text-xs font-medium bg-gradient-to-r from-white via-slate-100 to-white bg-clip-text text-transparent tracking-wide font-inter antialiased">
               Project <span className="font-bold">IDA</span>
             </h1>
+            </Link>
           </div>
 
           {/* Spacer to balance the layout */}
