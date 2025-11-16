@@ -30,7 +30,7 @@ const Homepage: React.FC = () => {
   const features = [
     {
       icon: Zap,
-      title: 'Automated ETL Pipeline',
+      title: 'Automated EDA Pipeline',
       description: 'End-to-end data processing with intelligent type inference and schema validation',
       color: 'from-emerald-500 to-teal-500',
     },
@@ -106,7 +106,7 @@ const Homepage: React.FC = () => {
                   Dashboard
                 </motion.button>
               ) : (
-                <>
+                <> 
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -157,7 +157,7 @@ const Homepage: React.FC = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light">
-              Production-ready ETL pipelines that transform raw datasets into ML-ready features.
+              Production-ready EDA pipelines that transform raw datasets into ML-ready features.
               <span className="block mt-2 text-lg text-slate-400">
                 What takes data scientists week, we do in seconds.
               </span>
