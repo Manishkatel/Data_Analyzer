@@ -40,6 +40,14 @@ const HomepageWorkflow: React.FC = () => {
     },
     {
       id: '2',
+      name: 'Data-Analysis',
+      description: 'Statistical analysis',
+      icon: BarChart3,
+      status: 'pending',
+      color: 'from-cyan-500 to-blue-500',
+    },
+    {
+      id: '3',
       name: 'Data Validation',
       description: 'Type detection & schema',
       icon: Settings,
@@ -47,7 +55,7 @@ const HomepageWorkflow: React.FC = () => {
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      id: '3',
+      id: '4',
       name: 'Infinite Values',
       description: 'Clean infinite values',
       icon: AlertTriangle,
@@ -55,7 +63,7 @@ const HomepageWorkflow: React.FC = () => {
       color: 'from-amber-500 to-orange-500',
     },
     {
-      id: '4',
+      id: '5',
       name: 'Missing Values',
       description: 'Handle nulls',
       icon: Filter,
@@ -63,7 +71,7 @@ const HomepageWorkflow: React.FC = () => {
       color: 'from-slate-500 to-gray-600',
     },
     {
-      id: '5',
+      id: '6',
       name: 'Data Quality',
       description: 'Quality checks',
       icon: BarChart3,
@@ -71,7 +79,7 @@ const HomepageWorkflow: React.FC = () => {
       color: 'from-indigo-500 to-blue-500',
     },
     {
-      id: '6',
+      id: '7',
       name: 'Encoding',
       description: 'Categorical encoding',
       icon: Code,
@@ -79,20 +87,12 @@ const HomepageWorkflow: React.FC = () => {
       color: 'from-teal-500 to-cyan-500',
     },
     {
-      id: '7',
+      id: '8',
       name: 'Normalization',
       description: 'Feature scaling',
       icon: TrendingUp,
       status: 'pending',
       color: 'from-emerald-500 to-teal-500',
-    },
-    {
-      id: '8',
-      name: 'Re-analysis',
-      description: 'Statistical analysis',
-      icon: BarChart3,
-      status: 'pending',
-      color: 'from-cyan-500 to-blue-500',
     },
     {
       id: '9',
@@ -102,7 +102,7 @@ const HomepageWorkflow: React.FC = () => {
       status: 'pending',
       color: 'from-blue-500 to-indigo-500',
     },
-    {
+    { 
       id: '10',
       name: 'Export Ready',
       description: 'ML-ready dataset',
@@ -166,7 +166,7 @@ const HomepageWorkflow: React.FC = () => {
           Automated Pipeline Architecture
         </h2>
         <p className="text-center text-slate-400 mb-12 text-lg font-light">
-          Ten-stage ETL process that transforms raw data into production-ready features
+          Ten-stage EDA process that transforms raw data into production-ready features
         </p>
 
         {/* Workflow Steps - Horizontal Scroll on Mobile, Grid on Desktop */}
