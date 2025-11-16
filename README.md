@@ -200,7 +200,6 @@ npm run dev   # Vite dev server (http://localhost:5173)
 4. **Battle-tested** – used by millions of projects, fewer bugs than hand-rolled utilities.  
 5. **Readable code** – `_.mean(arr)` is clearer than a manual reduce loop.
 
-> **Result:** Less boiler-plate, faster development, safer data transformations.
 
 ---
 
@@ -212,7 +211,6 @@ npm run dev   # Vite dev server (http://localhost:5173)
 4. **Environment variables** → add `VITE_API_URL=https://<your-backend>.onrender.com/api`.  
 5. **Backend** – deploy separately (Render, Railway, Fly.io, etc.) and expose the same env vars (`PORT`, `MONGODB_URI`, `JWT_SECRET`, `GEMINI_API_KEY`).  
 
-> **Tip:** Use Vercel’s *Preview* deployments for PR testing.
 
 ---
 
@@ -227,11 +225,11 @@ npm run dev   # Vite dev server (http://localhost:5173)
 
 ## License  
 
-MIT © Team 10  
+MIT © Team 10
 
 ---
 
 **Project IDA – Turn raw data into clean, model-ready insights in one click.**  
 
 *Fast. Transparent. Conversational. No code.*
-```
+
