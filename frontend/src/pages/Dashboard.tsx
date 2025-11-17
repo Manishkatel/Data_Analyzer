@@ -96,13 +96,6 @@ const Dashboard: React.FC = () => {
           </div>
           <div className="flex items-center gap-3">
             <button
-              onClick={handleNewDataset}
-              className="px-4 py-2 bg-slate-800/50 backdrop-blur-sm text-white rounded-lg border border-slate-700/50 hover:bg-slate-800/70 hover:border-emerald-500/30 transition-all flex items-center gap-2 text-sm font-medium"
-            >
-              <Upload className="w-4 h-4" />
-              New Dataset
-            </button>
-            <button
               onClick={handleLogout}
               className="px-4 py-2 bg-slate-800/50 backdrop-blur-sm text-red-400 rounded-lg border border-slate-700/50 hover:bg-red-500/10 hover:border-red-500/30 transition-all flex items-center gap-2 text-sm font-medium"
             >

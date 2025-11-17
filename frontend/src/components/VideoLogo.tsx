@@ -32,7 +32,6 @@ const VideoLogo: React.FC<VideoLogoProps> = ({
         video.play()
           .then(() => {
             hasPlayedRef.current = true;
-            console.log('✅ Video started playing');
           })
           .catch(() => {
             console.log('Autoplay prevented, will play on user click');

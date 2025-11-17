@@ -20,7 +20,13 @@ import VideoLogo from '../components/VideoLogo';
 const Homepage: React.FC = () => {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
+  const { user, logout } = useAuth();
 
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  }
+  
   const handleLaunchPipeline = () => {
     // Clear any existing analyzer session to start fresh
     sessionStorage.clear();
@@ -72,6 +78,7 @@ const Homepage: React.FC = () => {
     'AI generates insights and recommendations',
     'Download preprocessed, ML-ready data',
   ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-slate-900 to-zinc-950 overflow-hidden relative">
@@ -89,21 +96,31 @@ const Homepage: React.FC = () => {
         {/* Navigation */}
         <nav className="container mx-auto px-6 py-6">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex flex-col items-center gap-1">
-              <VideoLogo size="md" />
-              <span className="text-xs font-medium bg-gradient-to-r from-white via-slate-100 to-white bg-clip-text text-transparent tracking-wide font-inter antialiased">
-                Project <span className="font-bold">IDA</span>
-              </span>
-            </Link>
+            <div className="flex items-center gap-4">
+              
+              <Link to="/" className="flex flex-col items-center gap-1">
+              <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2, type: 'spring' }}
+                >
+                <VideoLogo size="md" />
+                <span className="text-xs font-medium bg-gradient-to-r from-white via-slate-100 to-white bg-clip-text text-transparent tracking-wide font-inter antialiased">
+                  Project <span className="font-bold">IDA</span>
+                </span>
+              </motion.div>
+              </Link>
+
+            </div>
             <div className="flex gap-4">
               {isAuthenticated ? (
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => navigate('/dashboard')}
-                  className="px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-lg border border-white/20 hover:bg-white/20 transition-all"
+                  onClick={handleLogout}
+                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm text-red-400 rounded-lg border border-slate-700/50 hover:bg-red-500/10 hover:border-red-500/30 transition-all flex items-center gap-2 text-md font-medium"
                 >
-                  Dashboard
+                  Logout
                 </motion.button>
               ) : (
                 <> 
@@ -130,7 +147,7 @@ const Homepage: React.FC = () => {
         </nav>
 
         {/* Hero Section */}
-        <div className="container mx-auto px-6 py-20">
+        <div className="container mx-auto px-6 py-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
