@@ -46,7 +46,7 @@ const AnalysisFullscreenContent = React.memo(({
   analysis: any;
   data: any[];
   datasetId: string;
-  onPreprocess: () => void;
+  onPreprocess: (data: any, analysis: Analysis, steps: string[]) => void;
   onReset: () => void;
 }) => (
   <div className="h-full w-full flex flex-col overflow-hidden">
@@ -390,7 +390,7 @@ const Analyzer: React.FC = () => {
                 analysis={analysis}
                 data={data}
                 datasetId={dataset!._id}
-                onPreprocess={handlePreprocess}
+                onPreprocess={() => handlePreprocess(data, analysis!, preprocessingSteps)}
                 onReset={handleReset}
               />
             </FullscreenChartModal>

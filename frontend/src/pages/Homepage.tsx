@@ -108,7 +108,7 @@ const Homepage: React.FC = () => {
                 <span className="text-xs font-medium bg-gradient-to-r from-white via-slate-100 to-white bg-clip-text text-transparent tracking-wide font-inter antialiased">
                   Project <span className="font-bold">IDA</span>
                 </span>
-              </motion.div>
+              </motion.div>``
               </Link>
 
             </div>
@@ -176,7 +176,7 @@ const Homepage: React.FC = () => {
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light">
               Production-ready EDA pipelines that transform raw datasets into ML-ready features.
               <span className="block mt-2 text-lg text-slate-400">
-                What takes data scientists week, we do in seconds.
+                What takes data scientists hours, we do it in seconds.
               </span>
             </p>
 
