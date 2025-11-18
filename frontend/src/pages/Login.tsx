@@ -16,7 +16,7 @@ const Login: React.FC = () => {
   // Redirect if already authenticated
   React.useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      navigate('/dashboard', { replace: true });
+      navigate('/', { replace: true });
     }
   }, [isAuthenticated, isLoading, navigate]);
 
@@ -27,7 +27,7 @@ const Login: React.FC = () => {
     try {
       await login(email, password);
       toast.success('Logged in successfully!');
-      navigate('/dashboard');
+      navigate('/');
     } catch (error: any) {
       toast.error(error.response?.data?.error || 'Login failed');
     } finally {
